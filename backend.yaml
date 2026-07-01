@@ -3,7 +3,7 @@
   become: yes
   vars:
     mysql_root_password: ExpenseApp@1
-    login_host: mysql.mamathakishore.shop
+    login_host: mysql.mamathakishorep.shop
   tasks:
   - name: disable default nodejs
     ansible.builtin.command: dnf module disable nodejs -y
@@ -35,7 +35,7 @@
       src: /tmp/backend.zip #by default ansible thinks this is in ansible server
       dest: /app
       remote_src: yes
-      
+
   - name: install dependencies
     ansible.builtin.command: npm install
     args:

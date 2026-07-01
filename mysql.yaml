@@ -3,11 +3,11 @@
   become: yes 
   vars:
     mysql_root_password: ExpenseApp@1
-    login_host: mysql.mamathakishore.shop
+    login_host: mysql.mamathakishorep.shop
   tasks:
   - name: ansible to install pymysql
     ansible.builtin.pip:
-     - name: pymysql
+       name: pymysql
        executable: pip3.9
   - name: install MySQL Server
     ansible.builtin.package:
